@@ -7,13 +7,17 @@ function BasicForm() {
 
   const submitForm = (e) => {
     e.preventDefault();
+    if (email && password) {
+      const data = { id: new Date().getTime(), email, password };
+      setAllData([...allData, data]);
+      // console.log(allData);
 
-    const data = { email: email, password: password };
-    setAllData([...allData, data]);
-    console.log(allData);
-
-    setEmail("");
-    setPassword("");
+      //empty input field after submit
+      setEmail("");
+      setPassword("");
+    } else {
+      alert("Please fill the email and password both");
+    }
   };
 
   return (
@@ -28,7 +32,6 @@ function BasicForm() {
             Email
           </label>
           <input
-            required
             className="text-indigo-800 bg-indigo-50 font-semibold pl-5  w-80 h-12 rounded-full"
             type="text"
             name="email"
@@ -45,7 +48,6 @@ function BasicForm() {
             Password
           </label>
           <input
-            required
             className="  text-indigo-800 bg-indigo-50 font-semibold pl-5  w-80 h-12 rounded-full"
             type="password"
             name="password"
@@ -62,12 +64,12 @@ function BasicForm() {
         >
           Submit
         </button>
-        {allData.map((item, index) => (
+        {allData.map((item) => (
           <p
             className="text-indigo-50/50 bg-indigo-500/30 px-5 py-3 rounded-lg"
-            key={index}
+            key={item.id}
           >
-            Email: {item.email} | Password: {item.password}
+            Email: {item.email} | Unique id: {item.id}
           </p>
         ))}
       </form>
