@@ -3,6 +3,7 @@ import ShortCircuit from "./components/ShortCircuit";
 import UseStateArray from "./components/UseStateArray";
 import UseStateObj from "./components/UseStateObj";
 import BasicForm from "./components/forms/BasicForm";
+import CleanupFunction from "./components/useEffects/CleanupFunction";
 import FirstUseEffects from "./components/useEffects/FirstUseEffects";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       {/* <UseStateObj /> */}
       {/* <ShortCircuit /> */}
       {/* <BasicForm /> */}
-      <FirstUseEffects />
+      {/* <FirstUseEffects /> */}
+      <CleanupFunction />
     </div>
   );
 }
