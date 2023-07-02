@@ -22,6 +22,7 @@ function BasicForm() {
 
   return (
     <>
+      {/* Controlled form, in the controlled form we used "value, onchange()" to get the data from form  */}
       <form
         className="flex flex-col gap-8 w-screen h-screen  justify-center items-center"
         action=""
