@@ -5,6 +5,7 @@ import UseStateArray from "./components/UseStateArray";
 import UseStateObj from "./components/UseStateObj";
 import BasicForm from "./components/forms/BasicForm";
 import Uncontrolled from "./components/forms/Uncontrolled";
+import CompA from "./components/useContext/CompA";
 import CleanupFunction from "./components/useEffects/CleanupFunction";
 import FirstUseEffects from "./components/useEffects/FirstUseEffects";
 
@@ -19,7 +20,9 @@ function App() {
       {/* <FirstUseEffects /> */}
       {/* <CleanupFunction /> */}
       {/* <Uncontrolled /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+
+      <CompA />
     </div>
   );
 }
